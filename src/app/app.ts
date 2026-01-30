@@ -9,4 +9,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('grk');
+  protected currentImage = signal('grk.jpeg');
+
+  toggleImage() {
+    this.currentImage.set(
+      this.currentImage() === 'grk.jpeg' ? 'grk2.jpeg' : 'grk.jpeg'
+    );
+  }
 }
